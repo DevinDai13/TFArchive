@@ -11,7 +11,7 @@ const styles = (theme) => ({
     display: 'flex',
     alignItems: 'center',
     [theme.breakpoints.up('sm')]: {
-      height: '80vh',
+      height: '92vh',
       minHeight: 500,
       maxHeight: 1300,
     },
@@ -42,10 +42,6 @@ const styles = (theme) => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     zIndex: -2,
-  },
-  arrowDown: {
-    position: 'absolute',
-    bottom: theme.spacing(4),
   },
 });
 
