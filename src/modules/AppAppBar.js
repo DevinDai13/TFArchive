@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import AppBar from '../components/AppBar';
-import Toolbar, { styles as toolbarStyles } from '../components/Toolbar';
+import AppBar from './components/AppBar';
+import Toolbar, { styles as toolbarStyles } from './components/Toolbar';
 
 const styles = (theme) => ({
   title: {

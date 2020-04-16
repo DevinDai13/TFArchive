@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Container from '@material-ui/core/Container';
-import Typography from '../components/Typography';
+import Typography from './components/Typography';
 
 const styles = (theme) => ({
   root: {
@@ -90,25 +90,25 @@ function ProductCategories(props) {
     {
       url:
         'https://images.unsplash.com/photo-1534081333815-ae5019106622?auto=format&fit=crop&w=400&q=80',
-      title: 'Snorkeling',
+      title: 'About me',
       width: '40%',
     },
     {
       url:
         'https://images.unsplash.com/photo-1531299204812-e6d44d9a185c?auto=format&fit=crop&w=400&q=80',
-      title: 'Massage',
+      title: 'Hobbies',
       width: '20%',
     },
     {
       url:
         'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=400&q=80',
-      title: 'Hiking',
+      title: 'Skills',
       width: '40%',
     },
     {
       url:
         'https://images.unsplash.com/photo-1453747063559-36695c8771bd?auto=format&fit=crop&w=400&q=80',
-      title: 'Tour',
+      title: 'Experiences',
       width: '38%',
     },
     {
@@ -128,7 +128,7 @@ function ProductCategories(props) {
   return (
     <Container className={classes.root} component="section">
       <Typography variant="h4" marked="center" align="center" component="h2">
-        For all tastes and all desires
+          Get to know me
       </Typography>
       <div className={classes.images}>
         {images.map((image) => (

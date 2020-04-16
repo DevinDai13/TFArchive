@@ -1,10 +1,9 @@
 import withRoot from './modules/withRoot';
-// --- Post bootstrap -----
 import React from 'react';
-import ProductCategories from './modules/views/ProductCategories';
-import AppFooter from './modules/views/AppFooter';
-import ProductHero from './modules/views/ProductHero';
-import AppAppBar from './modules/views/AppAppBar';
+import ProductCategories from './modules/ProductCategories';
+import AppFooter from './modules/AppFooter';
+import ProductHero from './modules/ProductHero';
+import AppAppBar from './modules/AppAppBar';
 
 function Index() {
   return (
