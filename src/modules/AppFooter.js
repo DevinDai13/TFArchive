@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import Container from '@material-ui/core/Container';
 import Typography from './components/Typography';
+import { SocialIcon } from 'react-social-icons';
 
 function Copyright() {
   return (
@@ -70,9 +71,8 @@ export default function AppFooter() {
               spacing={2}
             >
               <Grid item className={classes.icons}>
-                <a href="https://material-ui.com/" className={classes.icon}>
-                  <img src="/static/themes/onepirate/appFooterFacebook.png" alt="Facebook" />
-                </a>
+                <SocialIcon url="https://www.linkedin.com/in/devin-dai-48519117b/" />
+                <SocialIcon url="https://www.facebook.com/wen.dai.161" />
               </Grid>
               <Grid item>
                 <Copyright />

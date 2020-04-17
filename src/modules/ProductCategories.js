@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
+
 import Container from '@material-ui/core/Container';
 import Typography from './components/Typography';
 
@@ -89,13 +90,13 @@ function ProductCategories(props) {
   const images = [
     {
       url:
-        'https://images.unsplash.com/photo-1534081333815-ae5019106622?auto=format&fit=crop&w=400&q=80',
+        'https://img1.goodfon.com/wallpaper/nbig/1/47/noutbuk-rabochee-mesto-zametki.jpg',
       title: 'About me',
       width: '40%',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1531299204812-e6d44d9a185c?auto=format&fit=crop&w=400&q=80',
+        'https://wallpaperaccess.com/full/1986739.jpg',
       title: 'Hobbies',
       width: '20%',
     },
@@ -107,23 +108,30 @@ function ProductCategories(props) {
     },
     {
       url:
-        'https://images.unsplash.com/photo-1453747063559-36695c8771bd?auto=format&fit=crop&w=400&q=80',
+        'https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/165/165339/air-travel.jpg?w=1155&h=1541',
       title: 'Experiences',
-      width: '38%',
+      width: '100%',
     },
-    {
-      url:
-        'https://images.unsplash.com/photo-1523309996740-d5315f9cc28b?auto=format&fit=crop&w=400&q=80',
-      title: 'Gastronomy',
-      width: '38%',
-    },
-    {
-      url:
-        'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=400&q=80',
-      title: 'Shopping',
-      width: '24%',
-    },
+      
   ];
+
+  const handleclick0 =() => {
+    alert("GOT HERE 0");
+  };
+
+  const handleclick1 =() => {
+    alert("GOT HERE 1");
+  };
+
+  const handleclick2 =() => {
+    alert("GOT HERE 2");
+  };
+
+
+  const handleclick3 =() => {
+    alert("GOT HERE 3");
+  };
+
 
   return (
     <Container className={classes.root} component="section">
@@ -131,18 +139,16 @@ function ProductCategories(props) {
           Get to know me
       </Typography>
       <div className={classes.images}>
-        {images.map((image) => (
           <ButtonBase
-            key={image.title}
+            key={images[0].title}
             className={classes.imageWrapper}
-            style={{
-              width: image.width,
-            }}
+            style={{width: images[0].width,}}
+            onClick={handleclick0}
           >
             <div
               className={classes.imageSrc}
               style={{
-                backgroundImage: `url(${image.url})`,
+                backgroundImage: `url(${images[0].url})`,
               }}
             />
             <div className={classes.imageBackdrop} />
@@ -153,12 +159,86 @@ function ProductCategories(props) {
                 color="inherit"
                 className={classes.imageTitle}
               >
-                {image.title}
+                {images[0].title}
                 <div className={classes.imageMarked} />
               </Typography>
             </div>
           </ButtonBase>
-        ))}
+          <ButtonBase
+            key={images[1].title}
+            className={classes.imageWrapper}
+            style={{width: images[1].width,}}
+            onClick={handleclick1}
+          >
+            <div
+              className={classes.imageSrc}
+              style={{
+                backgroundImage: `url(${images[1].url})`,
+              }}
+            />
+            <div className={classes.imageBackdrop} />
+            <div className={classes.imageButton}>
+              <Typography
+                component="h3"
+                variant="h6"
+                color="inherit"
+                className={classes.imageTitle}
+              >
+                {images[1].title}
+                <div className={classes.imageMarked} />
+              </Typography>
+            </div>
+          </ButtonBase>
+          <ButtonBase
+            key={images[2].title}
+            className={classes.imageWrapper}
+            style={{width: images[2].width,}}
+            onClick={handleclick2}
+          >
+            <div
+              className={classes.imageSrc}
+              style={{
+                backgroundImage: `url(${images[2].url})`,
+              }}
+            />
+            <div className={classes.imageBackdrop} />
+            <div className={classes.imageButton}>
+              <Typography
+                component="h3"
+                variant="h6"
+                color="inherit"
+                className={classes.imageTitle}
+              >
+                {images[2].title}
+                <div className={classes.imageMarked} />
+              </Typography>
+            </div>
+          </ButtonBase>
+          <ButtonBase
+            key={images[3].title}
+            className={classes.imageWrapper}
+            style={{width: images[3].width,}}
+            onClick={handleclick3}
+          >
+            <div
+              className={classes.imageSrc}
+              style={{
+                backgroundImage: `url(${images[3].url})`,
+              }}
+            />
+            <div className={classes.imageBackdrop} />
+            <div className={classes.imageButton}>
+              <Typography
+                component="h3"
+                variant="h6"
+                color="inherit"
+                className={classes.imageTitle}
+              >
+                {images[3].title}
+                <div className={classes.imageMarked} />
+              </Typography>
+            </div>
+          </ButtonBase>
       </div>
     </Container>
   );

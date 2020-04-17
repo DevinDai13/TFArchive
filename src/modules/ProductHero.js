@@ -4,8 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from './components/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
 
-const backgroundImage =
-  'https://c.pxhere.com/photos/e7/17/coffee_notebook_wooden_background_orange_work_table_office-642063.jpg!d';
+const backgroundImage = 'https://c.pxhere.com/photos/e7/17/coffee_notebook_wooden_background_orange_work_table_office-642063.jpg!d';
 
 const styles = (theme) => ({
   background: {

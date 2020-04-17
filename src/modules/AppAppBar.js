@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from './components/AppBar';
+import homelogo from './favicon.ico'
 import Toolbar, { styles as toolbarStyles } from './components/Toolbar';
 
 const styles = (theme) => ({
@@ -10,10 +11,7 @@ const styles = (theme) => ({
   },
   placeholder: toolbarStyles(theme).root,
   toolbar: {
-    justifyContent: 'space-between',
-  },
-  left: {
-    flex: 1,
+    justifyContent: 'flex-start',
   },
   leftLinkActive: {
     color: theme.palette.common.white,
@@ -21,7 +19,7 @@ const styles = (theme) => ({
   right: {
     flex: 1,
     display: 'flex',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-start',
   },
   rightLink: {
     fontSize: 16,
@@ -40,7 +38,8 @@ function AppAppBar(props) {
     <div>
       <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
-          <div className={classes.left} />          
+          <div className={classes.left} />
+            <img src={homelogo} alt='' style={{height:'60px', width:'60px'}}></img>
         </Toolbar>
       </AppBar>
       <div className={classes.placeholder} />
