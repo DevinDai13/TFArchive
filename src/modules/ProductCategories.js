@@ -6,6 +6,8 @@ import Container from '@material-ui/core/Container';
 import Typography from './components/Typography';
 import Modal from '@material-ui/core/Modal';
 import AboutMe from './AboutMe';
+import Experiences from './Experiences';
+
  
 const styles = (theme) => ({
   root: {
@@ -104,7 +106,7 @@ function ProductCategories(props) {
     },
     {
       url:
-        'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=400&q=80',
+        'https://img.huffingtonpost.com/asset/5b9e41861f00002c0021eee7.jpeg?ops=scalefit_720_noupscale',
       title: 'Skills',
       width: '40%',
     },
@@ -121,21 +123,28 @@ function ProductCategories(props) {
   };
 
   const handleclick1 =() => {
-    alert("GOT HERE 1");
+    setOpen1(true);
   };
 
   const handleclick2 =() => {
-    alert("GOT HERE 2");
+    setOpen2(true);
   };
 
   const handleclick3 =() => {
-    alert("GOT HERE 3");
+    setOpen3(true);
   };
 
   const [open0, setOpen0] = React.useState(false);
+  const [open1, setOpen1] = React.useState(false);
+  const [open2, setOpen2] = React.useState(false);
+  const [open3, setOpen3] = React.useState(false);
+
 
   const handleClose = () => {
     setOpen0(false);
+    setOpen1(false);
+    setOpen2(false);
+    setOpen3(false);
   };
 
   return (
@@ -250,11 +259,41 @@ function ProductCategories(props) {
             onClose={handleClose}
             aria-labelledby="simple-modal-title"
             aria-describedby="simple-modal-description"
-            width={400}
-            height={400}
+            style={{display:'flex',alignItems:'center',justifyContent:'center'}}
+            >
+            <AboutMe />
+          </Modal>    
+
+          <Modal
+            open={open1}
+            onClose={handleClose}
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            style={{display:'flex',alignItems:'center',justifyContent:'center'}}
           >
-            <AboutMe style={{justifyContent: "center"}}/>
+            <Experiences />
           </Modal>      
+
+          <Modal
+            open={open2}
+            onClose={handleClose}
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            style={{display:'flex',alignItems:'center',justifyContent:'center'}}
+          >
+            <Experiences />
+          </Modal>      
+  
+          <Modal
+            open={open3}
+            onClose={handleClose}
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            style={{display:'flex',alignItems:'center',justifyContent:'center'}}
+          >
+            <Experiences />
+          </Modal>      
+
       </div>
     </Container>
   );

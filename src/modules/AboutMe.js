@@ -8,7 +8,7 @@ class AboutMe extends React.Component{
         return(
             <Card
                 justify="center"
-                style={{ height: 900, width: 1000 }}
+                style={{ height: 950, width: 1300 }}
                 cover={
                 <img
                     alt="Devin Dai"
