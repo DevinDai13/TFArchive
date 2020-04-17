@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
-
 import Container from '@material-ui/core/Container';
 import Typography from './components/Typography';
-
+import Modal from '@material-ui/core/Modal';
+import AboutMe from './AboutMe';
+ 
 const styles = (theme) => ({
   root: {
     marginTop: theme.spacing(8),
@@ -85,6 +86,7 @@ const styles = (theme) => ({
 });
 
 function ProductCategories(props) {
+  
   const { classes } = props;
 
   const images = [
@@ -112,11 +114,10 @@ function ProductCategories(props) {
       title: 'Experiences',
       width: '100%',
     },
-      
   ];
 
   const handleclick0 =() => {
-    alert("GOT HERE 0");
+    setOpen0(true);
   };
 
   const handleclick1 =() => {
@@ -127,11 +128,15 @@ function ProductCategories(props) {
     alert("GOT HERE 2");
   };
 
-
   const handleclick3 =() => {
     alert("GOT HERE 3");
   };
 
+  const [open0, setOpen0] = React.useState(false);
+
+  const handleClose = () => {
+    setOpen0(false);
+  };
 
   return (
     <Container className={classes.root} component="section">
@@ -239,6 +244,17 @@ function ProductCategories(props) {
               </Typography>
             </div>
           </ButtonBase>
+
+          <Modal
+            open={open0}
+            onClose={handleClose}
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            width={400}
+            height={400}
+          >
+            <AboutMe style={{justifyContent: "center"}}/>
+          </Modal>      
       </div>
     </Container>
   );

@@ -72,6 +72,7 @@ export default function AppFooter() {
             >
               <Grid item className={classes.icons}>
                 <SocialIcon url="https://www.linkedin.com/in/devin-dai-48519117b/" />
+                <SocialIcon url="https://github.com/DevinDai13" />
                 <SocialIcon url="https://www.facebook.com/wen.dai.161" />
               </Grid>
               <Grid item>
