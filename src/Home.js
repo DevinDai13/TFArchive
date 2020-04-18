@@ -1,9 +1,9 @@
-import withRoot from './modules/withRoot';
+import withRoot from './withRoot';
 import React from 'react';
-import ProductCategories from './modules/ProductCategories';
-import AppFooter from './modules/AppFooter';
-import ProductHero from './modules/ProductHero';
-import AppAppBar from './modules/AppAppBar';
+import ProductCategories from './ProductCategories';
+import AppFooter from './AppFooter';
+import ProductHero from './ProductHero';
+import AppAppBar from './AppAppBar';
 
 function Index() {
   return (
