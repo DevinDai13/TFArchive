@@ -7,6 +7,8 @@ import Typography from './components/Typography';
 import Modal from '@material-ui/core/Modal';
 import AboutMe from './AboutMe';
 import Experiences from './Experiences';
+import Hobby from './Hobby';
+import Skill from './Skills';
 
  
 const styles = (theme) => ({
@@ -271,7 +273,7 @@ function ProductCategories(props) {
             aria-describedby="simple-modal-description"
             style={{display:'flex',alignItems:'center',justifyContent:'center'}}
           >
-            <Experiences />
+            <Hobby />
           </Modal>      
 
           <Modal
@@ -281,7 +283,7 @@ function ProductCategories(props) {
             aria-describedby="simple-modal-description"
             style={{display:'flex',alignItems:'center',justifyContent:'center'}}
           >
-            <Experiences />
+            <Skill />
           </Modal>      
   
           <Modal

@@ -2,10 +2,10 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import { Card } from 'antd';
 
-class Experiences extends React.Component{
+class Hobby extends React.Component{
     render(){
         return(
-          <Card title="Experiences" style={{height:900, width:1300}}> 
+          <Card title="Hobbies" style={{height:900, width:1300}}> 
           <Card type="inner" title="Inner Card title">
             Inner Card content
           </Card>
@@ -22,4 +22,4 @@ class Experiences extends React.Component{
     }
 }
 
-export default Experiences
+export default Hobby
