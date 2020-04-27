@@ -1,7 +1,9 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Card, Avatar } from 'antd';
+import { Card, Avatar, Typography } from 'antd';
+
 const { Meta } = Card;
+const { Title } = Typography;
 
 class AboutMe extends React.Component{
     render(){
@@ -18,7 +20,7 @@ class AboutMe extends React.Component{
               justify="center"
               style={{ height: 900, width: 1000 }}
               avatar={<Avatar src="https://wallpaperaccess.com/full/810539.jpg" />}
-              title="About Me"
+              title={<Title level={4}>About me</Title>}
               description="This is the description"
             />
           </Card>

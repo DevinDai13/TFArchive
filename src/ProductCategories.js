@@ -9,6 +9,7 @@ import AboutMe from './AboutMe';
 import Experiences from './Experiences';
 import Hobby from './Hobby';
 import Skill from './Skills';
+import Qualification from './Qualification';
 
  
 const styles = (theme) => ({
@@ -116,7 +117,13 @@ function ProductCategories(props) {
       url:
         'https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/165/165339/air-travel.jpg?w=1155&h=1541',
       title: 'Experiences',
-      width: '100%',
+      width: '70%',
+    },
+    {
+      url:
+        'https://images.unsplash.com/photo-1531346878377-a5be20888e57?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
+      title: 'Other Qualifications',
+      width: '30%',
     },
   ];
 
@@ -136,10 +143,16 @@ function ProductCategories(props) {
     setOpen3(true);
   };
 
+  const handleclick4 =() => {
+    setOpen4(true);
+  };
+
+
   const [open0, setOpen0] = React.useState(false);
   const [open1, setOpen1] = React.useState(false);
   const [open2, setOpen2] = React.useState(false);
   const [open3, setOpen3] = React.useState(false);
+  const [open4, setOpen4] = React.useState(false);
 
 
   const handleClose = () => {
@@ -147,6 +160,7 @@ function ProductCategories(props) {
     setOpen1(false);
     setOpen2(false);
     setOpen3(false);
+    setOpen4(false);
   };
 
   return (
@@ -255,6 +269,31 @@ function ProductCategories(props) {
               </Typography>
             </div>
           </ButtonBase>
+          <ButtonBase
+            key={images[4].title}
+            className={classes.imageWrapper}
+            style={{width: images[4].width}}
+            onClick={handleclick4}
+          >
+            <div
+              className={classes.imageSrc}
+              style={{
+                backgroundImage: `url(${images[4].url})`,
+              }}
+            />
+            <div className={classes.imageBackdrop} />
+            <div className={classes.imageButton}>
+              <Typography
+                component="h3"
+                variant="h6"
+                color="inherit"
+                className={classes.imageTitle}
+              >
+                {images[4].title}
+                <div className={classes.imageMarked} />
+              </Typography>
+            </div>
+          </ButtonBase>
 
           <Modal
             open={open0}
@@ -295,6 +334,17 @@ function ProductCategories(props) {
           >
             <Experiences />
           </Modal>      
+
+          <Modal
+            open={open4}
+            onClose={handleClose}
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            style={{display:'flex',alignItems:'center',justifyContent:'center'}}
+          >
+            <Qualification />
+          </Modal>      
+
 
       </div>
     </Container>
