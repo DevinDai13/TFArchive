@@ -7,7 +7,7 @@ const { Title } = Typography;
 class Experiences extends React.Component{
     render(){
         return(
-          <Card title={<Title level={4}>Experiences</Title>} style={{height:900, width:1300}}>
+          <Card title={<Title level={4}>Experiences</Title>} style={{height:980, width:1300}}>
           <Card type="inner" title="City of Edmonton - Business Analyst Summer Student [May 2019 - August 2019]">
             <ul>
               <li>Demonstrated strong data visualizing and database skills through various Tableau visualization dashboards for the Project Management Office.</li>

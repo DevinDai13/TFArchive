@@ -7,7 +7,7 @@ const { Title } = Typography;
 class Skill extends React.Component{
     render(){
         return(
-          <Card title={<Title level={4}>Skills</Title>} style={{height:900, width:1300}}> 
+          <Card title={<Title level={4}>Skills</Title>} style={{height:980, width:1300}}> 
             <Card type="inner" title="Python	[4 Years]">
               <ul>
                 <li>Implemented solutions and programs to complex problems and datasets</li>

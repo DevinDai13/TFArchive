@@ -18,8 +18,8 @@ class AboutMe extends React.Component{
              >
             <Meta
               justify="center"
-              style={{ height: 1000, width: 1000 }}
-              avatar={<Avatar src="https://wallpaperaccess.com/full/810539.jpg" />}
+              style={{ height: 800, width: 1000 }}
+              avatar={<Avatar src="https://media-exp1.licdn.com/dms/image/C5603AQFpCsaCmsvP6Q/profile-displayphoto-shrink_200_200/0?e=1593648000&v=beta&t=vc7KosBE92YNhZxAE1eWuRjLiHLyCs7CNM8mRVqsPs0" />}
               title={<Title level={4}>About me</Title>}
               description="My name is Devin and I am a recent graduate from the University of Alberta specializing in computer science with a business minor.
               I am experienced with Python, SQL, React, Django framework, HTML, CSS and Git along with other various other programming languages applicable to the 
