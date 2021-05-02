@@ -3,12 +3,25 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from './components/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
+import IntroBackground0 from './Images/TF_Movie_0.jpg'
+import IntroBackground1 from './Images/TF_Movie_1.jpg'
+import IntroBackground2 from './Images/TF_Movie_2.jpg'
+import IntroBackground3 from './Images/TF_Movie_3.jpg'
 
-const backgroundImage = 'https://c.pxhere.com/photos/e7/17/coffee_notebook_wooden_background_orange_work_table_office-642063.jpg!d';
+
+const backgroundImage = [
+  IntroBackground0,
+  IntroBackground1,
+  IntroBackground2,
+  IntroBackground3
+];
+
+
+/*const backgroundImage = IntroBackground;*/
 
 const styles = (theme) => ({
   background: {
-    backgroundImage: `url(${backgroundImage})`,
+    backgroundImage: `url(${IntroBackground1})`,
     backgroundColor: '#7fc7d9', 
     backgroundPosition: 'center',
   },
@@ -28,18 +41,18 @@ const styles = (theme) => ({
 });
 
 function ProductHero(props) {
-  const { classes } = props;
+  const {classes} = props;
 
   return (
     <ProductHeroLayout backgroundClassName={classes.background}>
       {/* Increase the network loading priority of the background image. */}
-      <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />
-      <Typography color="inherit" align="center" variant="h2" marked="center">
-        Devin Dai      
-      </Typography>
-      <Typography variant="body2" color="inherit" className={classes.more}>
-        Welcome to my personal website
-      </Typography>
+        <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />
+        <Typography color="inherit" align="center" variant="h2" marked="center">
+          TF ARKIVE 
+        </Typography>
+        <Typography variant="h5" color="inherit" className={classes.more}>
+          Welcome to The TF Collection Archive
+        </Typography>
     </ProductHeroLayout>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from './components/AppBar';
-import homelogo from './favicon.ico'
+import homelogo from './Images/TF_Icon.jpg'
 import Toolbar, { styles as toolbarStyles } from './components/Toolbar';
 
 const styles = (theme) => ({

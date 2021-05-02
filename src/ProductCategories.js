@@ -5,12 +5,7 @@ import ButtonBase from '@material-ui/core/ButtonBase';
 import Container from '@material-ui/core/Container';
 import Typography from './components/Typography';
 import Modal from '@material-ui/core/Modal';
-import AboutMe from './AboutMe';
-import Experiences from './Experiences';
-import Hobby from './Hobby';
-import Skill from './Skills';
-import Qualification from './Qualification';
-
+import MPMRachet from './Images/mpm_rachet.jpg'
  
 const styles = (theme) => ({
   root: {
@@ -63,7 +58,7 @@ const styles = (theme) => ({
     top: 0,
     bottom: 0,
     backgroundSize: 'cover',
-    backgroundPosition: 'center 40%',
+    backgroundPosition: 'center 8%',
   },
   imageBackdrop: {
     position: 'absolute',
@@ -95,65 +90,55 @@ function ProductCategories(props) {
   const { classes } = props;
 
   const images = [
-    {
-      url:
-        'https://img1.goodfon.com/wallpaper/nbig/1/47/noutbuk-rabochee-mesto-zametki.jpg',
-      title: 'About me',
-      width: '40%',
-    },
-    {
-      url:
-        'https://wallpaperaccess.com/full/1986739.jpg',
-      title: 'Hobbies',
-      width: '20%',
-    },
-    {
-      url:
-        'https://img.huffingtonpost.com/asset/5b9e41861f00002c0021eee7.jpeg?ops=scalefit_720_noupscale',
-      title: 'Skills',
-      width: '40%',
-    },
-    {
-      url:
-        'https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/165/165339/air-travel.jpg?w=1155&h=1541',
-      title: 'Experiences',
-      width: '70%',
-    },
-    {
-      url:
-        'https://images.unsplash.com/photo-1531346878377-a5be20888e57?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
-      title: 'Other Qualifications',
-      width: '30%',
-    },
+    {url:
+        'https://media.karousell.com/media/photos/products/2020/01/22/legendary_toys_lt02_optimus_prime_mpm4_1579701182_71f571b4_progressive.jpg',
+      title: 'MPM Optimus Prime',
+      width: '30%',},
+    {url:
+        'https://hobbykorner.com/wp-content/uploads/2020/03/b51dac8e5b.jpg',
+      title: 'MPM Bumbelbee',
+      width: '30%',},
+    {url:
+        'https://news.tfw2005.com/wp-content/uploads/sites/10/2019/01/MPM6-Ironhide-022.jpg',
+      title: 'MPM Ironhide',
+      width: '40%',},
+    {url:
+        'https://images.tokopedia.net/img/cache/900/product-1/2020/6/17/270760/270760_1bf9ca52-aef9-4030-b366-103dec5fed70_720_720.jpg',
+      title: 'MPM Jazz',
+      width: '40%',},
+    {url:
+        MPMRachet,
+      title: 'MPM Ratchet',
+      width: '30%',},
+    {url:
+        'https://scontent.fyyc2-1.fna.fbcdn.net/v/t1.6435-9/70039363_2512032202416638_6982035789999767552_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=973b4a&_nc_ohc=ywCFmr_0e88AX-1b3dR&_nc_ht=scontent.fyyc2-1.fna&oh=2ead77a29c9621f1b8bb1faf3aab50c8&oe=60B4E6F5',
+      title: 'MPM Megatron',
+      width: '30%',},
+    {url:
+        'https://www.thechosenprime.com/assets/images/hasbro%20masterpiece/movie%20masterpiece/mpm10%20starscream/mpm10-starscream-10.jpg',
+      title: 'MPM Starscream',
+      width: '35%',},
+    {url:
+        'https://www.thechosenprime.com/assets/images/hasbro%20masterpiece/movie%20masterpiece/mpm10%20starscream/mpm10-starscream-10.jpg',
+      title: 'MPM Starscream',
+      width: '35%',},
   ];
 
-  const handleclick0 =() => {
-    setOpen0(true);
-  };
-
-  const handleclick1 =() => {
-    setOpen1(true);
-  };
-
-  const handleclick2 =() => {
-    setOpen2(true);
-  };
-
-  const handleclick3 =() => {
-    setOpen3(true);
-  };
-
-  const handleclick4 =() => {
-    setOpen4(true);
-  };
-
+  const handleclick0 =() => {setOpen0(true);};
+  const handleclick1 =() => {setOpen1(true);};
+  const handleclick2 =() => {setOpen2(true);};
+  const handleclick3 =() => {setOpen3(true);};
+  const handleclick4 =() => {setOpen4(true);};
+  const handleclick5 =() => {setOpen5(true);};
+  const handleclick6 =() => {setOpen6(true);};
 
   const [open0, setOpen0] = React.useState(false);
   const [open1, setOpen1] = React.useState(false);
   const [open2, setOpen2] = React.useState(false);
   const [open3, setOpen3] = React.useState(false);
   const [open4, setOpen4] = React.useState(false);
-
+  const [open5, setOpen5] = React.useState(false);
+  const [open6, setOpen6] = React.useState(false);
 
   const handleClose = () => {
     setOpen0(false);
@@ -161,12 +146,14 @@ function ProductCategories(props) {
     setOpen2(false);
     setOpen3(false);
     setOpen4(false);
+    setOpen5(false);
+    setOpen6(false);
   };
 
   return (
     <Container className={classes.root} component="section">
       <Typography variant="h4" marked="center" align="center" component="h2">
-          Get to know me
+          Gallery
       </Typography>
       <div className={classes.images}>
           <ButtonBase
@@ -294,6 +281,56 @@ function ProductCategories(props) {
               </Typography>
             </div>
           </ButtonBase>
+          <ButtonBase
+            key={images[5].title}
+            className={classes.imageWrapper}
+            style={{width: images[5].width,}}
+            onClick={handleclick5}
+          >
+            <div
+              className={classes.imageSrc}
+              style={{
+                backgroundImage: `url(${images[5].url})`,
+              }}
+            />
+            <div className={classes.imageBackdrop} />
+            <div className={classes.imageButton}>
+              <Typography
+                component="h3"
+                variant="h6"
+                color="inherit"
+                className={classes.imageTitle}
+              >
+                {images[5].title}
+                <div className={classes.imageMarked} />
+              </Typography>
+            </div>
+          </ButtonBase>
+          <ButtonBase
+            key={images[6].title}
+            className={classes.imageWrapper}
+            style={{width: images[6].width,}}
+            onClick={handleclick6}
+          >
+            <div
+              className={classes.imageSrc}
+              style={{
+                backgroundImage: `url(${images[6].url})`,
+              }}
+            />
+            <div className={classes.imageBackdrop} />
+            <div className={classes.imageButton}>
+              <Typography
+                component="h3"
+                variant="h6"
+                color="inherit"
+                className={classes.imageTitle}
+              >
+                {images[6].title}
+                <div className={classes.imageMarked} />
+              </Typography>
+            </div>
+          </ButtonBase>
 
           <Modal
             open={open0}
@@ -302,7 +339,7 @@ function ProductCategories(props) {
             aria-describedby="simple-modal-description"
             style={{display:'flex',alignItems:'center',justifyContent:'center'}}
             >
-            <AboutMe />
+            <img src='https://media.karousell.com/media/photos/products/2020/01/22/legendary_toys_lt02_optimus_prime_mpm4_1579701182_71f571b4_progressive.jpg' alt='' />
           </Modal>    
 
           <Modal
@@ -312,7 +349,7 @@ function ProductCategories(props) {
             aria-describedby="simple-modal-description"
             style={{display:'flex',alignItems:'center',justifyContent:'center'}}
           >
-            <Hobby />
+            <img src={MPMRachet} alt=''/>
           </Modal>      
 
           <Modal
@@ -322,7 +359,7 @@ function ProductCategories(props) {
             aria-describedby="simple-modal-description"
             style={{display:'flex',alignItems:'center',justifyContent:'center'}}
           >
-            <Skill />
+            <img src={MPMRachet} alt=''/>
           </Modal>      
   
           <Modal
@@ -332,7 +369,7 @@ function ProductCategories(props) {
             aria-describedby="simple-modal-description"
             style={{display:'flex',alignItems:'center',justifyContent:'center'}}
           >
-            <Experiences />
+            <img src={MPMRachet} alt=''/>
           </Modal>      
 
           <Modal
@@ -342,8 +379,28 @@ function ProductCategories(props) {
             aria-describedby="simple-modal-description"
             style={{display:'flex',alignItems:'center',justifyContent:'center'}}
           >
-            <Qualification />
-          </Modal>      
+            <img src={MPMRachet} alt=''/>
+          </Modal>   
+
+          <Modal
+            open={open5}
+            onClose={handleClose}
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            style={{display:'flex',alignItems:'center',justifyContent:'center'}}
+          >
+            <img src={MPMRachet} alt=''/>
+          </Modal>
+
+          <Modal
+            open={open6}
+            onClose={handleClose}
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            style={{display:'flex',alignItems:'center',justifyContent:'center'}}
+          >
+            <img src={MPMRachet} alt=''/>
+          </Modal>   
 
 
       </div>
