@@ -10,7 +10,7 @@ function Copyright() {
   return (
     <React.Fragment>
       {'© '}
-      {"Devin Dai "}
+      {"TF Arkive "}
       {new Date().getFullYear()}
     </React.Fragment>
   );
@@ -19,11 +19,11 @@ function Copyright() {
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    backgroundColor: theme.palette.secondary.light,
+    backgroundColor: theme.palette.secondary.dark,
   },
   container: {
-    marginTop: theme.spacing(8),
-    marginBottom: theme.spacing(8),
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(2),
     display: 'flex',
   },
   iconsWrapper: {
@@ -71,7 +71,6 @@ export default function AppFooter() {
               spacing={2}
             >
               <Grid item className={classes.icons}>
-                <SocialIcon url="https://www.linkedin.com/in/devin-dai-48519117b/" />
                 <SocialIcon url="https://github.com/DevinDai13" />
                 <SocialIcon url="https://www.facebook.com/wen.dai.161" />
               </Grid>

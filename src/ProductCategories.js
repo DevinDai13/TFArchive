@@ -117,11 +117,20 @@ function ProductCategories(props) {
     {url:
         'https://www.thechosenprime.com/assets/images/hasbro%20masterpiece/movie%20masterpiece/mpm10%20starscream/mpm10-starscream-10.jpg',
       title: 'MPM Starscream',
-      width: '35%',},
+      width: '25%',},
     {url:
-        'https://www.thechosenprime.com/assets/images/hasbro%20masterpiece/movie%20masterpiece/mpm10%20starscream/mpm10-starscream-10.jpg',
-      title: 'MPM Starscream',
-      width: '35%',},
+        'https://xogfdrdwnj.execute-api.us-west-2.amazonaws.com/production//image_17928_0_1611077116.jpeg',
+      title: 'UT Challenger',
+      width: '28%',},
+    {url:
+        'https://showzstore.com/u_file/1710/photo/4c47dc6f26.jpg',
+      title: 'UT Peru Kill',
+      width: '25%',},
+      {url:
+        'https://news.tfw2005.com/wp-content/uploads/sites/10/2019/08/UT-R03-Dragoon-01.jpg',
+      title: 'UT Dragoon',
+      width: '22%',},
+      
   ];
 
   const handleclick0 =() => {setOpen0(true);};
@@ -131,6 +140,9 @@ function ProductCategories(props) {
   const handleclick4 =() => {setOpen4(true);};
   const handleclick5 =() => {setOpen5(true);};
   const handleclick6 =() => {setOpen6(true);};
+  const handleclick7 =() => {setOpen7(true);};
+  const handleclick8 =() => {setOpen8(true);};
+  const handleclick9 =() => {setOpen9(true);};
 
   const [open0, setOpen0] = React.useState(false);
   const [open1, setOpen1] = React.useState(false);
@@ -139,6 +151,9 @@ function ProductCategories(props) {
   const [open4, setOpen4] = React.useState(false);
   const [open5, setOpen5] = React.useState(false);
   const [open6, setOpen6] = React.useState(false);
+  const [open7, setOpen7] = React.useState(false);
+  const [open8, setOpen8] = React.useState(false);
+  const [open9, setOpen9] = React.useState(false);
 
   const handleClose = () => {
     setOpen0(false);
@@ -148,6 +163,9 @@ function ProductCategories(props) {
     setOpen4(false);
     setOpen5(false);
     setOpen6(false);
+    setOpen7(false);
+    setOpen8(false);
+    setOpen9(false);
   };
 
   return (
@@ -331,6 +349,81 @@ function ProductCategories(props) {
               </Typography>
             </div>
           </ButtonBase>
+          <ButtonBase
+            key={images[7].title}
+            className={classes.imageWrapper}
+            style={{width: images[7].width,}}
+            onClick={handleclick7}
+          >
+            <div
+              className={classes.imageSrc}
+              style={{
+                backgroundImage: `url(${images[7].url})`,
+              }}
+            />
+            <div className={classes.imageBackdrop} />
+            <div className={classes.imageButton}>
+              <Typography
+                component="h3"
+                variant="h6"
+                color="inherit"
+                className={classes.imageTitle}
+              >
+                {images[7].title}
+                <div className={classes.imageMarked} />
+              </Typography>
+            </div>
+          </ButtonBase>
+          <ButtonBase
+            key={images[8].title}
+            className={classes.imageWrapper}
+            style={{width: images[8].width,}}
+            onClick={handleclick8}
+          >
+            <div
+              className={classes.imageSrc}
+              style={{
+                backgroundImage: `url(${images[8].url})`,
+              }}
+            />
+            <div className={classes.imageBackdrop} />
+            <div className={classes.imageButton}>
+              <Typography
+                component="h3"
+                variant="h6"
+                color="inherit"
+                className={classes.imageTitle}
+              >
+                {images[8].title}
+                <div className={classes.imageMarked} />
+              </Typography>
+            </div>
+          </ButtonBase>
+          <ButtonBase
+            key={images[9].title}
+            className={classes.imageWrapper}
+            style={{width: images[9].width,}}
+            onClick={handleclick9}
+          >
+            <div
+              className={classes.imageSrc}
+              style={{
+                backgroundImage: `url(${images[9].url})`,
+              }}
+            />
+            <div className={classes.imageBackdrop} />
+            <div className={classes.imageButton}>
+              <Typography
+                component="h3"
+                variant="h6"
+                color="inherit"
+                className={classes.imageTitle}
+              >
+                {images[9].title}
+                <div className={classes.imageMarked} />
+              </Typography>
+            </div>
+          </ButtonBase>
 
           <Modal
             open={open0}
@@ -338,8 +431,8 @@ function ProductCategories(props) {
             aria-labelledby="simple-modal-title"
             aria-describedby="simple-modal-description"
             style={{display:'flex',alignItems:'center',justifyContent:'center'}}
-            >
-            <img src='https://media.karousell.com/media/photos/products/2020/01/22/legendary_toys_lt02_optimus_prime_mpm4_1579701182_71f571b4_progressive.jpg' alt='' />
+          >
+            <img src={images[0].url} alt='' style={{height:'700px', width:'490px'}}/>
           </Modal>    
 
           <Modal
@@ -349,7 +442,7 @@ function ProductCategories(props) {
             aria-describedby="simple-modal-description"
             style={{display:'flex',alignItems:'center',justifyContent:'center'}}
           >
-            <img src={MPMRachet} alt=''/>
+            <img src={images[1].url} alt=''/>
           </Modal>      
 
           <Modal
@@ -359,7 +452,7 @@ function ProductCategories(props) {
             aria-describedby="simple-modal-description"
             style={{display:'flex',alignItems:'center',justifyContent:'center'}}
           >
-            <img src={MPMRachet} alt=''/>
+            <img src={images[2].url} alt='' style={{height:'800px', width:'800px'}}/>
           </Modal>      
   
           <Modal
@@ -369,7 +462,7 @@ function ProductCategories(props) {
             aria-describedby="simple-modal-description"
             style={{display:'flex',alignItems:'center',justifyContent:'center'}}
           >
-            <img src={MPMRachet} alt=''/>
+            <img src={images[3].url} alt=''/>
           </Modal>      
 
           <Modal
@@ -379,7 +472,7 @@ function ProductCategories(props) {
             aria-describedby="simple-modal-description"
             style={{display:'flex',alignItems:'center',justifyContent:'center'}}
           >
-            <img src={MPMRachet} alt=''/>
+            <img src={images[4].url} alt=''/>
           </Modal>   
 
           <Modal
@@ -389,7 +482,7 @@ function ProductCategories(props) {
             aria-describedby="simple-modal-description"
             style={{display:'flex',alignItems:'center',justifyContent:'center'}}
           >
-            <img src={MPMRachet} alt=''/>
+            <img src={images[5].url} alt=''/>
           </Modal>
 
           <Modal
@@ -399,8 +492,38 @@ function ProductCategories(props) {
             aria-describedby="simple-modal-description"
             style={{display:'flex',alignItems:'center',justifyContent:'center'}}
           >
-            <img src={MPMRachet} alt=''/>
+            <img src={images[6].url} alt=''/>
           </Modal>   
+
+          <Modal
+            open={open7}
+            onClose={handleClose}
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            style={{display:'flex',alignItems:'center',justifyContent:'center'}}
+          >
+            <img src={images[7].url} alt=''/>
+          </Modal>
+
+          <Modal
+            open={open8}
+            onClose={handleClose}
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            style={{display:'flex',alignItems:'center',justifyContent:'center'}}
+          >
+            <img src={images[8].url} alt=''/>
+          </Modal>
+
+          <Modal
+            open={open9}
+            onClose={handleClose}
+            aria-labelledby="simple-modal-title"
+            aria-describedby="simple-modal-description"
+            style={{display:'flex',alignItems:'center',justifyContent:'center'}}
+          >
+            <img src={images[9].url} alt=''/>
+          </Modal>
 
 
       </div>

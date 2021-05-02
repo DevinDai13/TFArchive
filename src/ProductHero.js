@@ -8,14 +8,12 @@ import IntroBackground1 from './Images/TF_Movie_1.jpg'
 import IntroBackground2 from './Images/TF_Movie_2.jpg'
 import IntroBackground3 from './Images/TF_Movie_3.jpg'
 
-
 const backgroundImage = [
   IntroBackground0,
   IntroBackground1,
   IntroBackground2,
   IntroBackground3
 ];
-
 
 /*const backgroundImage = IntroBackground;*/
 
@@ -51,7 +49,7 @@ function ProductHero(props) {
           TF ARKIVE 
         </Typography>
         <Typography variant="h5" color="inherit" className={classes.more}>
-          Welcome to The TF Collection Archive
+          Welcome to The Collection Archive
         </Typography>
     </ProductHeroLayout>
   );
