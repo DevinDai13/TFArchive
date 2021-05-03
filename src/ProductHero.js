@@ -20,7 +20,7 @@ const backgroundImage = [
 const styles = (theme) => ({
   background: {
     backgroundImage: `url(${IntroBackground1})`,
-    backgroundColor: '#7fc7d9', 
+    backgroundColor: 'black', 
     backgroundPosition: 'center',
   },
   button: {
