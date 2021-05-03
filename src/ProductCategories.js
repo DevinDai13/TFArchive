@@ -6,11 +6,20 @@ import Container from '@material-ui/core/Container';
 import Typography from './components/Typography';
 import Modal from '@material-ui/core/Modal';
 import MPMRachet from './Images/mpm_rachet.jpg'
+import Earth from './Images/earth.jpg'
  
 const styles = (theme) => ({
   root: {
-    marginTop: theme.spacing(8),
+    marginTop: theme.spacing(4),
     marginBottom: theme.spacing(4),
+    position: 'relative',
+    alignItems: 'center',
+    [theme.breakpoints.up('sm')]: {
+      height: '92vh',
+      width: '100vh',
+      minHeight: 500,
+      maxHeight: 1300,
+    },
   },
   images: {
     marginTop: theme.spacing(8),
@@ -169,8 +178,8 @@ function ProductCategories(props) {
   };
 
   return (
-    <Container className={classes.root} component="section">
-      <Typography variant="h4" marked="center" align="center" component="h2">
+    <Container className={classes.root} component="section" style={{height:'20%', width:'8000px', backgroundImage: `url(${Earth})`, backgroundColor: 'black',backgroundPosition: 'center'}}>
+      <Typography variant="h4" marked="center" align="center" component="h2" style={{color:"white"}}>
           Gallery
       </Typography>
       <div className={classes.images}>
@@ -524,10 +533,8 @@ function ProductCategories(props) {
           >
             <img src={images[9].url} alt=''/>
           </Modal>
-
-
       </div>
-    </Container>
+      </Container>
   );
 }
 
