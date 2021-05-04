@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from './components/AppBar';
@@ -44,11 +44,7 @@ const styles = (theme) => ({
 });
 
 
-class AppAppBar extends Component {
-
-  handleOfficial = () => {
-    document.location.assign(OFFICIAL_URL);
-  };
+class AppAppBar extends React.Component {
 
   render () {
     const { classes } = this.props;
@@ -62,7 +58,7 @@ class AppAppBar extends Component {
                 </a>
             <div className={classes.right}/>
               <Router>
-                <Button color="inherit" onClick={this.handleOfficial}>Official</Button>
+                <Button color="inherit" href={OFFICIAL_URL}>Official</Button>
                 <Button color="inherit" href={THIRD_PARTY_URL}>Third Party</Button>
                 <Button color="inherit" href={GOKIN_URL}>Gokin</Button>
                 <Switch>

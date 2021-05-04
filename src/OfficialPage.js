@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
@@ -64,7 +64,7 @@ const styles = theme => (
   }
 );
 
-class SimpleCard extends Component {
+class SimpleCard extends React.Component {
 
   state = { expanded: false };
 
