@@ -18,8 +18,32 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
+import AppBar from './components/AppBar';
+import homelogo from './Images/TF_Icon.jpg'
+import Toolbar, { styles as toolbarStyles } from './components/Toolbar';
+import {
+  THIRD_PARTY_URL,
+  OFFICIAL_URL,
+  GOKIN_URL,
+  HOME_URL,
+} from "./URL"
+
 const styles = theme => (
   {
+    placeholder: toolbarStyles(theme).root,
+    toolbar: {
+      justifyContent: 'flex-start',
+    },
+    right: {
+      flex: 1,
+      display: 'flex',
+      justifyContent: 'flex-start',
+    },
+    rightLink: {
+      fontSize: 16,
+      color: theme.palette.common.white,
+      marginLeft: theme.spacing(3),
+    },
     root: {
       display: 'flex',
       alignItems: 'center'
@@ -78,6 +102,19 @@ class SimpleCard extends React.Component {
 
     return (
       <div className={classes.root}>
+        <AppBar position="fixed">
+          <Toolbar className={classes.toolbar}>
+            <div className={classes.left} style={{backgroundColor:'black'}}/>
+                <a href={HOME_URL}>
+                  <img src={homelogo} alt='' style={{height:'60px', width:'60px'}} onClick={HOME_URL} />
+                </a>
+            <div className={classes.right}/>
+              <Button color="inherit" href={OFFICIAL_URL}>Official</Button>
+              <Button color="inherit" href={THIRD_PARTY_URL}>Third Party</Button>
+              <Button color="inherit" href={GOKIN_URL}>Gokin</Button>
+          </Toolbar>
+        </AppBar>
+        <div className={classes.placeholder} />
         <Card className={classes.card}>
           <CardContent>
             <Typography className={classes.title} color="textSecondary">

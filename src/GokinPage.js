@@ -23,6 +23,9 @@ const PHOTO_SET = [
 ];
 
 const styles = (theme) => ({
+  root:{
+    color: theme.palette.secondary.dark,
+  },
   title: {
     fontSize: 24,
   },

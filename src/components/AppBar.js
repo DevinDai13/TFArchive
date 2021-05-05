@@ -13,7 +13,7 @@ const styles = (theme) => ({
 class AppBar extends React.Component {
   render(){
     return(
-      <MuiAppBar elevation={0} position="static" {...this.props}/>
+      <MuiAppBar elevation={0} position="static" style={{backgroundColor:'#1e1e1f'}}{...this.props}/>
     );
   }
   
