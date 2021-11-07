@@ -2,10 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from './components/Typography';
-import IntroBackground0 from './Images/TF_Movie_0.jpg'
-import IntroBackground1 from './Images/TF_Movie_1.jpg'
-import IntroBackground2 from './Images/TF_Movie_2.jpg'
-import IntroBackground3 from './Images/TF_Movie_3.jpg'
+import IntroBackground1 from './Images/homebackground.jpg'
+
 import { Carousel } from 'antd';
 import 'antd/dist/antd.css';
 import { styles as toolbarStyles } from './components/Toolbar';
@@ -31,6 +29,9 @@ const styles = (theme) => ({
   more: {
     marginTop: theme.spacing(2),
   },
+  title: {
+    marginTop: theme.spacing(10),
+  }
 });
 
 class ProductHero extends React.Component {
@@ -39,81 +40,23 @@ class ProductHero extends React.Component {
 
     const Style1 = {
       height: '897px',
-      color: '#fff',
-      lineHeight: '160px',
-      textAlign: 'center',
-      backgroundImage: `url(${IntroBackground0})`,
-      backgroundSize: 'cover',
-    };
-
-    const Style2 = {
-      height: '897px',
-      color: '#fff',
-      lineHeight: '160px',
-      textAlign: 'center',
-      backgroundImage: `url(${IntroBackground3})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-    };
-
-    const Style3 = {
-      height: '897px',
-      color: '#fff',
+      color: '#1e1e1f',
       lineHeight: '160px',
       textAlign: 'center',
       backgroundImage: `url(${IntroBackground1})`,
       backgroundSize: 'cover',
     };
 
-    const Style4 = {
-      height: '897px',
-      color: '#fff',
-      lineHeight: '160px',
-      textAlign: 'center',
-      backgroundImage: `url(${IntroBackground2})`,
-      backgroundSize: 'cover',
-    };
-
     return (
-      <div>
-        <Carousel autoplay effect="fade">
+      <div> 
+        <Carousel autoplay effect="fade" speed={10000} dots={false}>
             <div>
               <h3 style={Style1}>
                 <Typography color="inherit" align="center" variant="h2" marked="center">
-                  TF ARKIVE 
+                  Anteiku
                 </Typography>
                 <Typography variant="h5" color="inherit" className={classes.more}>
-                  Welcome to The Collection Archive
-                </Typography>
-              </h3>
-            </div>
-            <div>
-              <h3 style={Style2} >
-                <Typography color="inherit" align="center" variant="h2" marked="center">
-                    TF ARKIVE 
-                  </Typography>
-                  <Typography variant="h5" color="inherit" className={classes.more}>
-                    Welcome to The Collection Archive
-                </Typography>
-              </h3>
-            </div>
-            <div>
-              <h3 style={Style3}>
-                <Typography color="inherit" align="center" variant="h2" marked="center">
-                    TF ARKIVE 
-                  </Typography>
-                  <Typography variant="h5" color="inherit" className={classes.more}>
-                    Welcome to The Collection Archive
-                </Typography>
-              </h3>
-            </div>
-            <div>
-              <h3 style={Style4}>
-                <Typography color="inherit" align="center" variant="h2" marked="center">
-                    TF ARKIVE 
-                  </Typography>
-                  <Typography variant="h5" color="inherit" className={classes.more}>
-                    Welcome to The Collection Archive
+      
                 </Typography>
               </h3>
             </div>

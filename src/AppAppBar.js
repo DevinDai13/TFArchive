@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from './components/AppBar';
-import homelogo from './Images/TF_Icon.jpg'
+import homelogo from './Images/noodle.png'
 import Toolbar, { styles as toolbarStyles } from './components/Toolbar';
 import Button from '@material-ui/core/Button';
 import {
@@ -31,11 +31,11 @@ const styles = (theme) => ({
   },
   rightLink: {
     fontSize: 16,
-    color: theme.palette.common.white,
+    color: '#1e1e1f',
     marginLeft: theme.spacing(3),
   },
   linkSecondary: {
-    color: theme.palette.secondary.main,
+    color: '#1e1e1f',
   },
 });
 
@@ -50,10 +50,10 @@ class AppAppBar extends React.Component {
           <Toolbar className={classes.toolbar}>
             <div className={classes.left}/>
                 <a href={HOME_URL}>
-                  <img src={homelogo} alt='' style={{height:'60px', width:'60px'}} onClick={HOME_URL} />
+                  <img src={homelogo} alt='' style={{height:'60px', width:'100px'}} onClick={HOME_URL} />
                 </a>
             <div className={classes.right}/>
-                <Button color="inherit" href={OFFICIAL_URL}>Official</Button>
+                <Button color="inherit" href={OFFICIAL_URL}>Menu</Button>
                 <Button color="inherit" href={THIRD_PARTY_URL}>Third Party</Button>
                 <Button color="inherit" href={GOKIN_URL}>Gokin</Button>
           </Toolbar>

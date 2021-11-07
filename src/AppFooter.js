@@ -10,7 +10,7 @@ function Copyright() {
   return (
     <React.Fragment>
       {'© '}
-      {"TF Arkive "}
+      {"Anateiku "}
       {new Date().getFullYear()}
     </React.Fragment>
   );

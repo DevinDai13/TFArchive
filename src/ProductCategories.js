@@ -5,8 +5,7 @@ import ButtonBase from '@material-ui/core/ButtonBase';
 import Container from '@material-ui/core/Container';
 import Typography from './components/Typography';
 import Modal from '@material-ui/core/Modal';
-import MPMRachet from './Images/mpm_rachet.jpg'
-import Earth from './Images/earth.jpg'
+import Earth from './Images/bg2.jpg'
  
 const styles = (theme) => ({
   root: {
@@ -16,7 +15,7 @@ const styles = (theme) => ({
     alignItems: 'center',
     [theme.breakpoints.up('sm')]: {
       height: '92vh',
-      width: '100vh',
+      width: '500vh',
       minHeight: 500,
       maxHeight: 1300,
     },
@@ -100,44 +99,44 @@ function ProductCategories(props) {
 
   const images = [
     {url:
-        'https://media.karousell.com/media/photos/products/2020/01/22/legendary_toys_lt02_optimus_prime_mpm4_1579701182_71f571b4_progressive.jpg',
-      title: 'MPM Optimus Prime',
+        'https://images.chinahighlights.com/allpicture/2019/11/81223e71381b4ee99857c3c5_cut_800x500_61.jpg',
+      title: '',
       width: '30%',},
     {url:
-        'https://hobbykorner.com/wp-content/uploads/2020/03/b51dac8e5b.jpg',
-      title: 'MPM Bumbelbee',
+        'https://buddybits.com/wp-content/uploads/2017/04/10-Best-Chinese-Dishes-You-Must-Try-768x514.jpg',
+      title: '',
       width: '30%',},
     {url:
-        'https://news.tfw2005.com/wp-content/uploads/sites/10/2019/01/MPM6-Ironhide-022.jpg',
-      title: 'MPM Ironhide',
+        'https://images.indianexpress.com/2017/07/biryani1.jpg',
+      title: '',
       width: '40%',},
     {url:
-        'https://images.tokopedia.net/img/cache/900/product-1/2020/6/17/270760/270760_1bf9ca52-aef9-4030-b366-103dec5fed70_720_720.jpg',
-      title: 'MPM Jazz',
+        'https://images.chinahighlights.com/allpicture/2020/03/a38353fbeb9148c688e44f45_cut_800x500_9.jpgttps://images.tokopedia.net/img/cache/900/product-1/2020/6/17/270760/270760_1bf9ca52-aef9-4030-b366-103dec5fed70_720_720.jpg',
+      title: '',
       width: '40%',},
     {url:
-        MPMRachet,
-      title: 'MPM Ratchet',
+        'https://www.tasteofhome.com/wp-content/uploads/2021/01/tasty-butter-chicken-curry-dish-from-indian-cuisine-1277362334.jpg?fit=700,700',
+      title: '',
       width: '30%',},
     {url:
-        'https://scontent.fyyc2-1.fna.fbcdn.net/v/t1.6435-9/70039363_2512032202416638_6982035789999767552_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=973b4a&_nc_ohc=ywCFmr_0e88AX-1b3dR&_nc_ht=scontent.fyyc2-1.fna&oh=2ead77a29c9621f1b8bb1faf3aab50c8&oe=60B4E6F5',
-      title: 'MPM Megatron',
+        'https://im.whatshot.in/img/2019/Jan/image-9-1546505789.jpg',
+      title: '',
       width: '30%',},
     {url:
-        'https://www.thechosenprime.com/assets/images/hasbro%20masterpiece/movie%20masterpiece/mpm10%20starscream/mpm10-starscream-10.jpg',
-      title: 'MPM Starscream',
+        'https://loveincorporated.blob.core.windows.net/contentimages/gallery/d9e900e4-212e-4c3d-96d5-cb14a023c659-worlds-most-delicious-dishes.jpg',
+      title: '',
       width: '25%',},
     {url:
-        'https://xogfdrdwnj.execute-api.us-west-2.amazonaws.com/production//image_17928_0_1611077116.jpeg',
-      title: 'UT Challenger',
+        'https://images.latintimes.com/sites/latintimes.com/files/styles/picture_this/public/2015/05/01/mexican-food.jpg',
+      title: '',
       width: '28%',},
     {url:
-        'https://showzstore.com/u_file/1710/photo/4c47dc6f26.jpg',
-      title: 'UT Peru Kill',
+        'https://im.whatshot.in/img/2019/Jan/image-2-1546503378.jpg',
+      title: '',
       width: '25%',},
       {url:
-        'https://news.tfw2005.com/wp-content/uploads/sites/10/2019/08/UT-R03-Dragoon-01.jpg',
-      title: 'UT Dragoon',
+        'https://insanelygoodrecipes.com/wp-content/uploads/2021/02/Homemade-Borsch-Cabbage-Soup-with-Meat-683x1024.webp',
+      title: '',
       width: '22%',},
       
   ];
@@ -178,7 +177,9 @@ function ProductCategories(props) {
   };
 
   return (
-    <Container className={classes.root} component="section" style={{height:'20%', width:'8000px', backgroundImage: `url(${Earth})`, backgroundColor: 'black',backgroundPosition: 'center'}}>
+    <Container className={classes.root} 
+              component="section" 
+              style={{height:'20%', width:'2000vh', backgroundImage: `url(${Earth})`, backgroundColor: 'black',backgroundPosition: 'center',backgroundSize: 'cover'}}>
       <Typography variant="h4" marked="center" align="center" component="h2" style={{color:"white"}}>
           Gallery
       </Typography>

@@ -6,14 +6,14 @@ import MuiAppBar from '@material-ui/core/AppBar';
 
 const styles = (theme) => ({
   root: {
-    color: theme.palette.common.white,
+    color: '#1e1e1f',
   },
 });
 
 class AppBar extends React.Component {
   render(){
     return(
-      <MuiAppBar elevation={0} position="static" style={{backgroundColor:'#1e1e1f'}}{...this.props}/>
+      <MuiAppBar elevation={0} position="static" style={{backgroundColor:'#FAEBD7'}}{...this.props}/>
     );
   }
   

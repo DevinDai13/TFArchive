@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import red from '@material-ui/core/colors/red';
 import AppBar from './components/AppBar';
-import homelogo from './Images/TF_Icon.jpg'
+import homelogo from './Images/noodle.png'
 import Toolbar, { styles as toolbarStyles } from './components/Toolbar';
 import { Carousel } from 'antd';
 import 'antd/dist/antd.css';
@@ -96,7 +96,7 @@ class SimpleCard extends React.Component {
           <Toolbar className={classes.toolbar}>
             <div className={classes.left} style={{backgroundColor:'black'}}/>
                 <a href={HOME_URL}>
-                  <img src={homelogo} alt='' style={{height:'60px', width:'60px'}} onClick={HOME_URL} />
+                  <img src={homelogo} alt='' style={{height:'60px', width:'100px'}} onClick={HOME_URL} />
                 </a>
             <div className={classes.right}/>
               <Button color="inherit" href={OFFICIAL_URL}>Official</Button>
